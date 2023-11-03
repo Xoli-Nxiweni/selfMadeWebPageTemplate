@@ -210,14 +210,7 @@ nav .toggleBar .bar{
 .image{
     width: 100%;
 }
-button{
-    color: var(--nav-background-color);
-    transition: .25s ease-in-out;
-    &:hover, &:focus{
-        border-color: var(--nav-background-color);
-        color: #fff;
-    }
-}
+
 .hireMeButton{
     padding: 10px;
     margin: 10px 0 0 0;
@@ -229,12 +222,19 @@ button{
     border-radius: 50px;
     /* transition: all .4s ease-in; */
 }
+.button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: red;
+  }
 .hireMeButton:hover{
     background-color: var(--nav-background-color);
     color: #ffffff;
 }
-/* .hireMeButton:hover,
-.hireMeButton:focus {
-    box-shadow: inset 605em 0 0 0 var(--nav-background-color);
-    color: #ffffff;
-} */
