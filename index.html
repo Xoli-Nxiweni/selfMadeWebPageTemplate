@@ -2,25 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="script.js" defer></script>
-    <title>My Homepage</title>
+    <title>Xoli >> Portfolio</title>
 </head>
 <body>
     <nav>
         <input type="checkbox" id="nav-toggle">
-        <div class="logo"><a href="#" onclick="contactPopUp()">Xolile Nxiweni</a></div>
+        <div class="logo"><a href="index.html">Mr. Nxiweni</a></div>
         <ul class="links">
-            <li><a href="#" class="" onclick="contactPopUp()">home</a></li>
-            <li><a href="#" onclick="contactPopUp()">services</a></li>
-            <li><a href="#" onclick="contactPopUp()">portfolio</a></li>
+            <li><a href="#" class="">home</a></li>
+            <li><a href="#services">portfolio</a></li>
+            <li><a href="#portfolio">services</a></li>
+            <li><a href="#portfolio">projects</a></li>
         </ul>
         <label for="nav-toggle" class="toggleBar">
             <div class="bar"></div>
@@ -30,13 +33,38 @@
     </nav>
     <section class="index-section">
         <div class="index-div">
-            <h1>Web <span>Developer</span></h1>
-        <p>I consider myself similar to a spider, as I work as a web developer..</p>
-        <button class="hireMeButton" onclick="contactPopUp()">Hire Me</button>
+            <h1>UI<span>/</span>UX <span class="effect"></span></h1>
+        <p>Hello, my name is <strong><span>Xoli Nxiweni</span></strong>. I consider myself similar to a Spider, because I work as a <strong><span>Web Developer</span></strong>..</p>
+        <div class="buttons">
+            <button class="btn" id="showPopup" onclick="">Hire Me!</button>
+            <div id="contactPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close" id="closePopup">
+                        <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+                    </span>
+                    <h2><span>Contact</span> Me</h2>
+                    <form>
+                        <input type="text" placeholder="Name" class="input" required>
+                        <input type="email" placeholder="Email" class="input" required>
+                        <textarea placeholder="Message" class="textarea" required></textarea>
+                        <button type="submit" class="button" >Submit</button>
+                    </form>
+                </div>
+            </div>
+        <button class="btn" onclick="contactPopUp()">Why Me?</button>
+        </div>
         </div>
         <div class="image-div">
             <img src="imgs/heroBanner.png" class="image">
         </div>
+    </section>
+    <div class="services" id="services">
+
+    </div>
+    <section class="index-section" id="portfolio">
+       
     </section>
 </body>
 </html>
