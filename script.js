@@ -20,7 +20,7 @@ navLinks.forEach(link => {
 
 //wordchange effect
 var typed = new Typed(".effect", {
-  strings: ["Designer", "Developer", "Tester"],
+  strings: [" Designer", " Developer", " Tester"],
   loop: true,
   typeSpeed: 75,
   backSpeed: 5,
