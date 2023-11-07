@@ -13,17 +13,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="script.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <title>Xoli >> Portfolio</title>
 </head>
 <body>
     <nav>
         <input type="checkbox" id="nav-toggle">
-        <div class="logo"><a href="index.html">Mr. Nxiweni</a></div>
+        <div class="logo"><a href="index.html" onclick="contactPopUp()">Mr. Nxiweni</a></div>
         <ul class="links">
-            <li><a href="#" class="">home</a></li>
-            <li><a href="#services">portfolio</a></li>
-            <li><a href="#portfolio">services</a></li>
-            <li><a href="#portfolio">projects</a></li>
+            <li><a href="#" class="" onclick="contactPopUp()">home</a></li>
+            <li><a href="#services" onclick="contactPopUp()">portfolio</a></li>
+            <li><a href="#portfolio" onclick="contactPopUp()">services</a></li>
+            <li><a href="#portfolio" onclick="contactPopUp()">projects</a></li>
         </ul>
         <label for="nav-toggle" class="toggleBar">
             <div class="bar"></div>
@@ -33,8 +36,8 @@
     </nav>
     <section class="index-section">
         <div class="index-div">
-            <h1>UI<span>/</span>UX <span class="effect"></span></h1>
-        <p>Hello, my name is <strong><span>Xoli Nxiweni</span></strong>. I consider myself similar to a Spider, because I work as a <strong><span>Web Developer</span></strong>..</p>
+            <h1>UI<span>/</span>UX<span class="effect"></span></h1>
+        <p class="box">Hello, my name is <strong><span>Xoli Nxiweni</span></strong>. I consider myself similar to a Spider, because I work as a <strong><span>Web Developer</span></strong>..</p>
         <div class="buttons">
             <button class="btn" id="showPopup" onclick="">Hire Me!</button>
             <div id="contactPopup" class="popup">
@@ -46,25 +49,60 @@
                     </span>
                     <h2><span>Contact</span> Me</h2>
                     <form>
-                        <input type="text" placeholder="Name" class="input" required>
-                        <input type="email" placeholder="Email" class="input" required>
-                        <textarea placeholder="Message" class="textarea" required></textarea>
-                        <button type="submit" class="button" >Submit</button>
+                        <input type="text" placeholder="Name" class="input" required id="nameText">
+                        <input type="email" placeholder="Email" class="input" required id="emailText">
+                        <textarea placeholder="Message" class="textarea" required id="messageText"></textarea>
+                        <button type="submit" class="button" id="btn" >Submit</button>
                     </form>
                 </div>
             </div>
-        <button class="btn" onclick="contactPopUp()">Why Me?</button>
+        <button class="btn" id="showPopup2" onclick="contactPopUp()">Why Me?</button>
+        <!-- <div id="contactPopup2" class="popup2">
+            <div class="popup-content">
+                <span class="close2" id="closePopup2">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </span>
+                <h2><span>Why</span> Me? Good question, let me walk you through</h2>
+                <form>
+                    
+                </form>
+            </div>
+        </div> -->
         </div>
         </div>
         <div class="image-div">
             <img src="imgs/heroBanner.png" class="image">
         </div>
     </section>
-    <div class="services" id="services">
+    <!-- <div class="services" id="services">
 
     </div>
     <section class="index-section" id="portfolio">
        
-    </section>
+    </section> -->
+    <script>
+        // Initialize ScrollReveal
+        const sr = ScrollReveal();
+
+        // Define the configuration for the scroll reveal effect
+        sr.reveal('.index-section h1, .index-section p, .contactPopup', {
+            duration: 1000,   // Duration of the reveal animation (in milliseconds)
+            origin: 'bottom', // From where the elements will be revealed
+            distance: '20px', // Distance and direction from the origin
+            delay: 200,       // Delay before the reveal starts (in milliseconds)
+            easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing function for the animation
+        });
+
+        // You can add more elements to reveal by adding additional sr.reveal calls
+        sr.reveal('.btn', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '20px',
+            delay: 400,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+    </script>
 </body>
 </html>

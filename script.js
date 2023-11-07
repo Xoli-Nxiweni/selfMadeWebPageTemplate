@@ -39,3 +39,36 @@ showPopupButton.addEventListener("click", function () {
 closePopupButton.addEventListener("click", function () {
     contactPopup.style.display = "none";
 });
+
+//Pop up contact page
+const showPopupButton2 = document.getElementById("showPopup2");
+const closePopupButton2 = document.getElementById("closePopup2");
+const contactPopup2 = document.getElementById("contactPopup2");
+
+showPopupButton2.addEventListener("click", function () {
+    contactPopup2.style.display = "block";
+});
+
+closePopupButton2.addEventListener("click", function () {
+    contactPopup2.style.display = "none";
+});
+//email sender
+const message = '';
+var btn = document.getElementById('btn');
+btn.addEventListener('click' , function(e){
+  e.preventDefault()
+  var nameText = document.getElementById('nameText').value;
+  var emailText = document.getElementById('emailText').value;
+  var messageText = document.getElementById('messageText').value;
+  var body = 'Name: ' + nameText + '<br/> Email: ' + emailText + '<br/> Message: ' + messageText;
+  Email.send({
+    SecureToken : "bcfebab8-2cf5-4eaf-bcf0-906ecadf425a",
+    To : 'xolinxiweni@gmail.com',
+    From : "xolinxiweni@gmail.com",
+    Subject : "From Website Visits",
+    Body : body
+  }).then(
+      message = 'Message succesfully sent !!'
+  );
+});
+//screenReveal
