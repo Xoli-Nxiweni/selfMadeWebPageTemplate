@@ -40,20 +40,8 @@ closePopupButton.addEventListener("click", function () {
     contactPopup.style.display = "none";
 });
 
-//Pop up contact page
-const showPopupButton2 = document.getElementById("showPopup2");
-const closePopupButton2 = document.getElementById("closePopup2");
-const contactPopup2 = document.getElementById("contactPopup2");
-
-showPopupButton2.addEventListener("click", function () {
-    contactPopup2.style.display = "block";
-});
-
-closePopupButton2.addEventListener("click", function () {
-    contactPopup2.style.display = "none";
-});
 //email sender
-var btn = document.getElementById('btn');
+var btn = document.getElementById('submit-btn');
 btn.addEventListener('click' , function(e){
   e.preventDefault()
   var nameText = document.getElementById('nameText').value;
@@ -61,12 +49,12 @@ btn.addEventListener('click' , function(e){
   var messageText = document.getElementById('messageText').value;
   var body = 'Name: ' + nameText + '<br/> Email: ' + emailText + '<br/> Message: ' + messageText;
   Email.send({
-    SecureToken : "bcfebab8-2cf5-4eaf-bcf0-906ecadf425a",
-    To : 'xolinxiweni@gmail.com',
-    From : "xolinxiweni@gmail.com",
-    Subject : "From Website Visits",
-    Body : body
-  }).then(
-  message => alert(message)
-  );
+  SecureToken : "1b431171-2983-456a-a8f1-8e5a90909c26",
+  To : 'xolinxiweni@gmail.com',
+  From : "xolinxiweni@gmail.com",
+  Subject : "From Website Visits",
+  Body : body
+}).then(
+message => alert(message)
+);
 })

@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="script.js" defer></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <title>Xoli >> Portfolio</title>
@@ -21,7 +22,7 @@
 <body>
     <nav>
         <input type="checkbox" id="nav-toggle">
-        <div class="logo"><a href="index.html" onclick="contactPopUp()">Mr. Nxiweni</a></div>
+        <div class="logo"><a href="index.html">Mr. Nxiweni</a></div>
         <ul class="links">
             <li><a href="#" class="" onclick="contactPopUp()">home</a></li>
             <li><a href="#services" onclick="contactPopUp()">portfolio</a></li>
@@ -43,16 +44,16 @@
             <div id="contactPopup" class="popup">
                 <div class="popup-content">
                     <span class="close" id="closePopup">
-                        <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                     </span>
                     <h2><span>Contact</span> Me</h2>
                     <form>
                         <input type="text" placeholder="Name" class="input" required id="nameText">
                         <input type="email" placeholder="Email" class="input" required id="emailText">
                         <textarea placeholder="Message" class="textarea" required id="messageText"></textarea>
-                        <button type="submit" class="button" id="btn" >Submit</button>
+                        <button type="submit" class="button" id="submit-btn" >Submit</button>
                     </form>
                 </div>
             </div>
