@@ -53,7 +53,6 @@ closePopupButton2.addEventListener("click", function () {
     contactPopup2.style.display = "none";
 });
 //email sender
-const message = '';
 var btn = document.getElementById('btn');
 btn.addEventListener('click' , function(e){
   e.preventDefault()
@@ -68,7 +67,6 @@ btn.addEventListener('click' , function(e){
     Subject : "From Website Visits",
     Body : body
   }).then(
-      message = 'Message succesfully sent !!'
+  message => alert(message)
   );
 });
-//screenReveal
