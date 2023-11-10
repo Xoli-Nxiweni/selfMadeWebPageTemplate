@@ -20,30 +20,33 @@ navLinks.forEach(link => {
 
 //wordchange effect
 var typed = new Typed(".effect", {
-  strings: [" Designer", " Developer", " Tester"],
+  strings: ["Front End Designer.", 
+  "Java Programmer.", 
+  "Front End Tester.", 
+  "Back End Designer."],
   loop: true,
-  typeSpeed: 75,
+  typeSpeed: 80,
   backSpeed: 5,
   backDelay: 2500,
 });
 
 //Pop up contact page
-const showPopupButton = document.getElementById("showPopup");
-const closePopupButton = document.getElementById("closePopup");
-const contactPopup = document.getElementById("contactPopup");
+// const showPopupButton = document.getElementById("showPopup");
+// const closePopupButton = document.getElementById("closePopup");
+// const contactPopup = document.getElementById("contactPopup");
 
-showPopupButton.addEventListener("click", function () {
-    contactPopup.style.display = "block";
-});
+// showPopupButton.addEventListener("click", function () {
+//     contactPopup.style.display = "block";
+// });
 
-closePopupButton.addEventListener("click", function () {
-    contactPopup.style.display = "none";
-});
+// closePopupButton.addEventListener("click", function () {
+//     contactPopup.style.display = "none";
+// });
 
 //email sender
 var btn = document.getElementById('submit-btn');
 btn.addEventListener('click' , function(e){
-  e.preventDefault()
+  
   var nameText = document.getElementById('nameText').value;
   var emailText = document.getElementById('emailText').value;
   var messageText = document.getElementById('messageText').value;

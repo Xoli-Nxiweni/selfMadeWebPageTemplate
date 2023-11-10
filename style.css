@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap'); */
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -8,7 +8,7 @@
     line-height: 1.5;
 }
 :root{
-	--nav-background-color: #203286;
+	--nav-background-color: #00396E;
     --bg-color: ;
     --second-bg-color: ;
     --text-color: #242121 ;
@@ -51,9 +51,8 @@ nav .logo{
     color: var(--button-color);
     font-weight: bold;
     letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all .4s ease-in;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Dancing Script', cursive;
 }
 nav .links{
     width: 60%;
@@ -143,7 +142,7 @@ nav .toggleBar .bar{
     .index-div{
         padding: 0 10% 0 0;
     }
-    .index-section h1 span{
+    .index-section .effect{
         padding: 0 10px;
     }
 }
@@ -217,20 +216,23 @@ nav.sticky .links{
         background: #dfdfdf;
         justify-content: space-around;
         padding: 80px 10%;
-        text-align: center;
+        /* text-align: ; */
        
     }
     .index-section{
         background-image: none;
+        
     }
     .index-div{
         grid-row: 2;
+        
     }
     .image-div{
         grid-row: 1;
+        
     }
     .index-section h1{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     .index-section p{
         font-size: 1rem;
@@ -269,7 +271,7 @@ nav.sticky .links{
     border: 3px solid var(--nav-background-color);
     color: var(--button-color);
     background: var(--nav-background-color);
-    border-radius: 50px;
+    border-radius: 15px;
     transition: all .4s ease-in;
     cursor: pointer;
     letter-spacing: 1px;
@@ -278,10 +280,7 @@ nav.sticky .links{
     background-color:inherit;
     color: var(--nav-background-color); 
 }
-.services{
-    background: #ffffff;
-    height: 100vh;
-}
+
 /* Pop up container */
 .popup {
     display: none;
@@ -454,4 +453,53 @@ form {
 .button:hover{
     background-color:inherit;
     color: var(--nav-background-color)
+}
+.services{
+    text-align: center;
+    background: #ffffff;
+    align-items: center;
+    padding: 15px 10%;
+    /* height: 100vh; */
+}
+
+.services h2{
+    padding: 0 0 2rem 0;
+}
+
+.services .sevContainer{
+    justify-content: space-around;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 48%); 
+    gap: 4%;
+}
+.services .sevContainer p, .services h3{
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+.services .myServicesImage img{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px 2px rgba(51, 51, 51, 0.5);
+}
+.services h1, .services h3{
+    color: var(--nav-background-color);
+}
+.myServicesText{
+    padding: 25px 0;
+}
+@media (max-width: 940px) {
+    .services .sevContainer{
+        /* display: grid;
+        grid-template-columns: repeat(1, 90%); */
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .services{
+        /* display: grid;
+        grid-template-columns: repeat(1, 90%); */
+    }
 }

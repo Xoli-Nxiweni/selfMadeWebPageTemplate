@@ -25,8 +25,8 @@
         <div class="logo"><a href="index.html">Mr. Nxiweni</a></div>
         <ul class="links">
             <li><a href="#" class="" onclick="contactPopUp()">home</a></li>
-            <li><a href="#services" onclick="contactPopUp()">portfolio</a></li>
-            <li><a href="#portfolio" onclick="contactPopUp()">services</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#portfolio" onclick="contactPopUp()">portfolio</a></li>
             <li><a href="#portfolio" onclick="contactPopUp()">projects</a></li>
         </ul>
         <label for="nav-toggle" class="toggleBar">
@@ -37,10 +37,10 @@
     </nav>
     <section class="index-section">
         <div class="index-div">
-            <h1>UI<span>/</span>UX <span class="effect"> </span></h1>
+            <h1 style="color: #00396E;">A <span class="effect"></span></h1>
         <p class="box">Hello, my name is <strong><span>Xoli Nxiweni</span></strong>. I consider myself similar to a Spider, because I work as a <strong><span>Web Developer</span></strong>..</p>
         <div class="buttons">
-            <button class="btn" id="showPopup" onclick="">Hire Me!</button>
+            <button class="btn" id="showPopup" onclick="contactPopUp()">Hire Me!</button>
             <div id="contactPopup" class="popup">
                 <div class="popup-content">
                     <span class="close" id="closePopup">
@@ -50,9 +50,9 @@
                     </span>
                     <h2><span>Contact</span> Me</h2>
                     <form>
-                        <input type="text" placeholder="Name" class="input" required id="nameText">
-                        <input type="email" placeholder="Email" class="input" required id="emailText">
-                        <textarea placeholder="Message" class="textarea" required id="messageText"></textarea>
+                        <input type="text" placeholder="Name" class="input"  id="nameText" required>
+                        <input type="email" placeholder="Email" class="input"  id="emailText" required>
+                        <textarea placeholder="Message" class="textarea"  id="messageText" required></textarea>
                         <button type="submit" class="button" id="submit-btn" >Submit</button>
                     </form>
                 </div>
@@ -74,34 +74,39 @@
         </div>
         </div>
         <div class="image-div">
-            <img src="imgs/heroBanner.png" class="image">
+            <img src="imgs/Build-Custom-Web-Apps.png" class="image">
         </div>
     </section>
-    <!-- <div class="services" id="services">
-
+    <div class="services" id="services">
+        <h1>My <span>Services</span></h1>
+        <div class="sevContainer">
+            <div class="myServicesImage">
+                <img class="horse" src="https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/318314251_2306662119500524_3689351205664377195_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cpX-77cSzBgAX8V6r2s&_nc_oc=AQn9ZiUVvJnEdNc8YAMUO-LoIjcCbciN4ZLjORWOz2s8wyz1S6YHIOtJieGElX_5NSs&_nc_ht=scontent-jnb1-1.xx&oh=00_AfCw0f49I-D6lVsBEdBA24GNpMzhkNkKmfkz6EeR4gmh3A&oe=655248DF">
+            </div>
+            <div class="myServicesText">
+                <h3><span style="color: #5DC3F4;">More About Me</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fuga inventore fugit et sapiente ad perspiciatis, cupiditate ex voluptates ipsum vel suscipit pariatur provident, molestiae impedit culpa soluta. Hic, error.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, error qui hic soluta enim odit quos expedita provident nesciunt magnam dolores dolorum, eveniet sed. Voluptatibus ipsum cumque veniam eaque iste!</p>
+        </div>
     </div>
-    <section class="index-section" id="portfolio">
-       
-    </section> -->
     <script>
         // Initialize ScrollReveal
         const sr = ScrollReveal();
-
         // Define the configuration for the scroll reveal effect
-        sr.reveal('.index-section h1, .index-section p, .contactPopup', {
+        sr.reveal('.index-section h1, .index-section p, .contactPopup, .myServicesText, .myServicesImage', {
             duration: 1000,   // Duration of the reveal animation (in milliseconds)
             origin: 'bottom', // From where the elements will be revealed
-            distance: '20px', // Distance and direction from the origin
-            delay: 200,       // Delay before the reveal starts (in milliseconds)
+            distance: '200px', // Distance and direction from the origin
+            delay: 250,       // Delay before the reveal starts (in milliseconds)
             easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing function for the animation
         });
 
         // You can add more elements to reveal by adding additional sr.reveal calls
-        sr.reveal('.btn', {
+        sr.reveal('rwyuqre.image-div , myServicesImage', {
             duration: 1000,
-            origin: 'bottom',
-            distance: '20px',
-            delay: 400,
+            origin: 'right',
+            distance: '1500px',
+            delay: 450,
             easing: 'cubic-bezier(0.5, 0, 0, 1)',
         });
     </script>
