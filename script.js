@@ -71,34 +71,34 @@ var typed = new Typed(".effect", {
   backDelay: 2500,
 });
 
-//Pop up contact page
-// const showPopupButton = document.getElementById("showPopup");
-// const closePopupButton = document.getElementById("closePopup");
-// const contactPopup = document.getElementById("contactPopup");
+// Pop up contact page
+const showPopupButton = document.getElementById("showPopup");
+const closePopupButton = document.getElementById("closePopup");
+const contactPopup = document.getElementById("contactPopup");
 
-// showPopupButton.addEventListener("click", function () {
-//     contactPopup.style.display = "block";
-// });
+showPopupButton.addEventListener("click", function () {
+    contactPopup.style.display = "block";
+});
 
-// closePopupButton.addEventListener("click", function () {
-//     contactPopup.style.display = "none";
-// });
+closePopupButton.addEventListener("click", function () {
+    contactPopup.style.display = "none";
+});
 
-//email sender
-var btn = document.getElementById('submit-btn');
-btn.addEventListener('click' , function(e){
+// email sender
+// var btn = document.getElementById('submit-btn');
+// btn.addEventListener('click' , function(e){
   
-  var nameText = document.getElementById('nameText').value;
-  var emailText = document.getElementById('emailText').value;
-  var messageText = document.getElementById('messageText').value;
-  var body = 'Name: ' + nameText + '<br/> Email: ' + emailText + '<br/> Message: ' + messageText;
-  Email.send({
-  SecureToken : "1b431171-2983-456a-a8f1-8e5a90909c26",
-  To : 'xolinxiweni@gmail.com',
-  From : "xolinxiweni@gmail.com",
-  Subject : "From Website Visits",
-  Body : body
-}).then(
-message => alert(message)
-);
-})
+//   var nameText = document.getElementById('nameText').value;
+//   var emailText = document.getElementById('emailText').value;
+//   var messageText = document.getElementById('messageText').value;
+//   var body = 'Name: ' + nameText + '<br/> Email: ' + emailText + '<br/> Message: ' + messageText;
+//   Email.send({
+//   SecureToken : "1b431171-2983-456a-a8f1-8e5a90909c26",
+//   To : 'xolinxiweni@gmail.com',
+//   From : "xolinxiweni@gmail.com",
+//   Subject : "From Website Visits",
+//   Body : body
+// }).then(
+// message => alert(message)
+// )
+// });

@@ -54,10 +54,7 @@ nav .logo{
     letter-spacing: 1px;
     transition: all .4s ease-in;
 }
-.logo a, .links a{
-    /* font-family: 'Playfair Display', serif; */
-    
-}
+
 nav .links{
     width: 60%;
     height: 100%;
@@ -476,7 +473,7 @@ form {
     /* align-items: center; */
     display: grid;
     grid-template-columns: repeat(2, 45%); 
-    padding: 20px 0;
+    padding: 50px 0;
 }
 .services .sevContainer p, .sevContainer h3{
     /* justify-content: space-around; */
@@ -491,11 +488,13 @@ form {
 }
 .services h1, .services h3 a{
     color: var(--nav-background-color);
+    
     /* padding: 0 2rem 0 0; */
     /* text-decoration: underline; */
 }
 .services h1{
     padding: 55px 0 0 0;
+    border-bottom: 2px solid #5DC3F4;
 }
 /* .myServicesText{
     padding: 25px 0;
@@ -540,9 +539,13 @@ form {
     text-decoration: none;
     transition: all .4s ease-in-out;
     cursor: pointer;
+    border-bottom: 2px solid #5DC3F4;
 }
 
 .service-header a:hover {
+    color: #5DC3F4;
+}
+.service-header a.active {
     color: #5DC3F4;
 }
 #revealText1{
