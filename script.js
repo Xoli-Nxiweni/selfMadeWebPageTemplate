@@ -39,7 +39,7 @@ function infoReveal(elementId, clickedLink) {
   if (clickedLink) {
       clickedLink.classList.add('active');
   }
-}
+};
 
 
 // const infoReveal = document.getElementById('click1');
