@@ -16,7 +16,48 @@ function closeMobileNav(){
 }
 navLinks.forEach(link => {
   link.addEventListener('click', closeMobileNav)
-})
+});
+
+function infoReveal(elementId, clickedLink) {
+  const allRevealTexts = document.querySelectorAll('.revealText');
+  allRevealTexts.forEach(text => {
+      text.style.display = "none";
+  });
+
+  const revealText = document.getElementById(elementId);
+  if (revealText) {
+      revealText.style.display = "block";
+  }
+
+  // Remove 'active' class from all links
+  const allLinks = document.querySelectorAll('.service-header a');
+  allLinks.forEach(link => {
+      link.classList.remove('active');
+  });
+
+  // Add 'active' class to the clicked link
+  if (clickedLink) {
+      clickedLink.classList.add('active');
+  }
+}
+
+
+// const infoReveal = document.getElementById('click1');
+// const infoReveal2 = document.getElementById('click2');
+// const infoReveal3 = document.getElementById('click3');
+
+// // Assuming you want to show 'infoReveal' when it is clicked
+// infoReveal.addEventListener('click', function() {
+//   infoReveal.style.display = "block";
+// });
+// // Assuming you want to show 'infoReveal2' when it is clicked
+// infoReveal2.addEventListener('click', function() {
+//   infoReveal2.style.display = "block";
+// });
+// // Assuming you want to show 'infoReveal3' when it is clicked
+// infoReveal3.addEventListener('click', function() {
+//   infoReveal3.style.display = "block";
+// });
 
 //wordchange effect
 var typed = new Typed(".effect", {

@@ -1,4 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Black+Ops+One&family=Playfair+Display&display=swap');
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -51,8 +52,11 @@ nav .logo{
     color: var(--button-color);
     font-weight: bold;
     letter-spacing: 1px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all .4s ease-in;
+}
+.logo a, .links a{
+    /* font-family: 'Playfair Display', serif; */
+    
 }
 nav .links{
     width: 60%;
@@ -124,7 +128,7 @@ nav .toggleBar .bar{
   }
 @media (min-width: 941px) {
     .index-section{
-        background: #dfdfdf;
+        background: #dfdfdf77;
         display: inline-grid;
         grid-template-columns: 1fr 1fr;
         height: 100vh;
@@ -133,11 +137,11 @@ nav .toggleBar .bar{
         padding: 80px 10%;
     }
     .index-section h1{
-        font-size: 3rem;    
+        font-size: 2rem;    
         display: flex;
     }
     .index-section p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .index-div{
         padding: 0 10% 0 0;
@@ -208,12 +212,12 @@ nav.sticky .links{
     }
     .index-section{
         display: inline-grid;
-        grid-template-columns: repeat(1, 90%);
+        grid-template-columns: repeat(1, 100%);
         grid-template-rows: auto;
         height: 100vh;
         width: 100%;
         align-items: center;
-        background: #dfdfdf;
+        background: #dfdfdfa3;
         justify-content: space-around;
         padding: 80px 10%;
         /* text-align: ; */
@@ -232,10 +236,11 @@ nav.sticky .links{
         
     }
     .index-section h1{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        text-align: center;
     }
     .index-section p{
-        font-size: 1rem;
+        font-size: .9rem;
     }
     .image{
         width: 100%;
@@ -457,38 +462,94 @@ form {
 .services{
     text-align: center;
     background: #ffffff;
-    align-items: center;
+    /* align-items: center; */
     padding: 15px 10%;
     /* height: 100vh; */
 }
 
-.services h2{
-    padding: 0 0 2rem 0;
+.services h3{
+    padding: 0 0 5px 0;
 }
 
 .services .sevContainer{
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
     display: grid;
-    grid-template-columns: repeat(2, 48%); 
-    gap: 4%;
+    grid-template-columns: repeat(2, 45%); 
+    padding: 20px 0;
 }
-.services .sevContainer p, .services h3{
-    justify-content: space-around;
-    align-items: center;
+.services .sevContainer p, .sevContainer h3{
+    /* justify-content: space-around; */
+    /* align-items: center; */
     text-align: left;
 }
 
 .services .myServicesImage img{
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px 2px rgba(51, 51, 51, 0.5);
+    width: 85%;
+    border-radius: 5%;
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.5);
 }
-.services h1, .services h3{
+.services h1, .services h3 a{
+    color: var(--nav-background-color);
+    /* padding: 0 2rem 0 0; */
+    /* text-decoration: underline; */
+}
+.services h1{
+    padding: 55px 0 0 0;
+}
+/* .myServicesText{
+    padding: 25px 0;
+}
+.service-header{
+    display: flex;
+}
+.service-header a{
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+.service-header a:hover{
     color: var(--nav-background-color);
 }
-.myServicesText{
-    padding: 25px 0;
+.revealText2{
+    display: none;
+}
+.revealText3{
+    display: none;
+} */
+
+.myServicesText {
+    transition: all .4s ease-in-out;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+}
+.service-header h3{
+    /* border: 2px solid #00396E; */
+    /* border-radius: 10px; */
+    margin: 0 9px 9px 0;
+}
+.service-header h3:hover{
+    /* border-radius: 10px; */
+    margin: 0 9px 9px 0;
+}
+
+.service-header a {
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+.service-header a:hover {
+    color: #5DC3F4;
+}
+#revealText1{
+    display: block;
+}
+.revealText {
+    display: none;
 }
 @media (max-width: 940px) {
     .services .sevContainer{
@@ -501,5 +562,10 @@ form {
     .services{
         /* display: grid;
         grid-template-columns: repeat(1, 90%); */
+        height: 100vh;
+    }
+    .service-header h3{
+        font-size: .8rem;
+        padding: 20px 0 0 0;
     }
 }

@@ -83,17 +83,61 @@
             <div class="myServicesImage">
                 <img class="horse" src="https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/318314251_2306662119500524_3689351205664377195_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cpX-77cSzBgAX8V6r2s&_nc_oc=AQn9ZiUVvJnEdNc8YAMUO-LoIjcCbciN4ZLjORWOz2s8wyz1S6YHIOtJieGElX_5NSs&_nc_ht=scontent-jnb1-1.xx&oh=00_AfCw0f49I-D6lVsBEdBA24GNpMzhkNkKmfkz6EeR4gmh3A&oe=655248DF">
             </div>
+            <!-- <div class="myServicesText">
+                <div class="service-header">
+                    <h3><span style="color: #5DC3F4;"><a id="click1" onclick="infoReveal()">About Me</a></span></h3>
+                    <h3><span style="color: #5DC3F4;"><a id="click2" onclick="infoReveal()">About Me</a></span></h3>
+                    <h3><span style="color: #5DC3F4;"><a id="click3" onclick="infoReveal()">About Me</a></span></h3>
+                </div>
+                <div class="revealText1"><p>I am a Software Engineer with a few years of experience in Systems Development. I am passionate about creating secure and exciting applications and I am always looking for new ways to learn and grow. I am also a creative and resourceful person, and I am always up for a challenge.
+
+                    I am committed to providing my clients with the best possible service, and I am always available to answer their questions and help them achieve their goals.
+                    
+                    I am also OCA Java SE 8 holder and have an adeqate close to outstanding knowlegde of the programming language.</p>
+                    
+                    <p>I am excited to connect with you and learn more about your needs. Please feel free to contact me.</p></div>
+                <div class="revealText2"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus pariatur repellendus, eos consequuntur nihil libero ducimus vel similique ad qui quaerat possimus laboriosam sit temporibus eveniet quis, explicabo accusantium voluptate?</p></div>
+                <div class="revealText3"></div>
+            </div> -->
+
             <div class="myServicesText">
-                <h3><span style="color: #5DC3F4;">More About Me</span></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fuga inventore fugit et sapiente ad perspiciatis, cupiditate ex voluptates ipsum vel suscipit pariatur provident, molestiae impedit culpa soluta. Hic, error.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, error qui hic soluta enim odit quos expedita provident nesciunt magnam dolores dolorum, eveniet sed. Voluptatibus ipsum cumque veniam eaque iste!</p>
-        </div>
+                <div class="service-header">
+                    <h3><span><a id="click1" onclick="infoReveal('revealText1')" class="active">About Me</a></span></h3>
+                    <h3><span><a id="click2" onclick="infoReveal('revealText2')">My Passion</a></span></h3>
+                    <h3><span><a id="click3" onclick="infoReveal('revealText3')">My Services</a></span></h3>
+                </div>
+                <div class="revealText" id="revealText1">
+                    <p>I am a Software Engineer with a few years of experience in Systems Development. I am passionate about creating secure and exciting applications and I am always looking for new ways to learn and grow. I am also a creative and resourceful person, and I am always up for a challenge.
+                    </p>
+                    <p>I am committed to providing my clients with the best possible service, and I am always available to answer their questions and help them achieve their goals.
+                    </p>
+                    <p>I am also OCA Java SE 8 holder and have an adequate close to outstanding knowledge of the programming language.</p>
+                    <p>I am excited to connect with you and learn more about your needs. Please feel free to contact me.</p>
+                </div>
+                <div class="revealText" id="revealText2">
+                    <p>
+                        As we navigate the ever-changing technological landscape, systems development remains a beacon of hope and progress. It is the driving force behind the digital solutions that empower businesses, connect communities, and enhance our lives. Systems developers are the architects of our digital world, crafting software applications, websites, and other innovations that shape our daily experiences. At the heart of systems development lies a deep-rooted passion for technology and a fascination with its limitless potential. This passion fuels the desire to explore new frontiers, to overcome challenges, and to shape the future. It is this passion that inspires developers to dedicate countless hours to honing their skills, mastering complex algorithms, and debugging intricate code.
+                        
+                        The passion for systems development extends beyond technical expertise; it encompasses a profound understanding of human needs and aspirations. It is about recognizing that technology is not just about tools and algorithms; it is about empowering individuals, enhancing communication, and improving the human experience. Systems developers are not merely coders; they are problem solvers, innovators, and visionaries. They are the ones who transform abstract ideas into tangible solutions that impact our lives in meaningful ways.</p>
+                </div>
+                <div class="revealText" id="revealText3">
+                    <p>
+                        As an innovative Java programmer with a passion for creating real-world solutions, I am equipped with strong front-end skills using HTML, CSS, and JavaScript. Additionally, I hold two Microsoft certifications for Azure cloud computing, empowering me to provide comprehensive services encompassing custom software development, web application development, cloud-based application development, mobile app development, and Microsoft Azure cloud computing consulting. Contact me today for a free quote and let's transform your digital vision into reality.</p>
+                </div>
+            </div>
+
+
+            <!-- <div class="myServicesText">
+                <h3><span style="color: #5DC3F4;">About Me</span></h3>
+                
+            </div> -->
     </div>
+    
     <script>
         // Initialize ScrollReveal
         const sr = ScrollReveal();
         // Define the configuration for the scroll reveal effect
-        sr.reveal('.index-section h1, .index-section p, .contactPopup, .myServicesText, .myServicesImage', {
+        sr.reveal('.index-section h1, .index-section p, .contactPopup, .myServicesText, .myServicesText', {
             duration: 1000,   // Duration of the reveal animation (in milliseconds)
             origin: 'bottom', // From where the elements will be revealed
             distance: '200px', // Distance and direction from the origin
@@ -102,7 +146,7 @@
         });
 
         // You can add more elements to reveal by adding additional sr.reveal calls
-        sr.reveal('rwyuqre.image-div , myServicesImage', {
+        sr.reveal('.image , .myServicesImage, ', {
             duration: 1000,
             origin: 'right',
             distance: '1500px',
