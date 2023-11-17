@@ -67,9 +67,21 @@ var typed = new Typed(".effect", {
   "Back End Designer."],
   loop: true,
   typeSpeed: 80,
-  backSpeed: 5,
+  backSpeed: 25,
   backDelay: 2500,
 });
+var typed2 = new Typed(".effect2", {
+  strings: ["About Me.", 
+  "About Me.", 
+  "My Passion.", 
+  "My Services.",],
+  loop: true,
+  typeSpeed: 90,
+  backSpeed: 25,
+  backDelay: 2000,
+});
+
+
 
 // Pop up contact page
 const showPopupButton = document.getElementById("showPopup");

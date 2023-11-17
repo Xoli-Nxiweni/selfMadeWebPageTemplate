@@ -62,26 +62,36 @@ nav .links{
 }
 nav .links li{
     list-style: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     transition: all .4s ease-in-out;
     border-radius: 50px;
 }
 nav .links a{
     float: right;
     display: block;
-    padding: 10px;
     font-weight: bold;
     color: var(--button-color);
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: .2em;
     transition: all .4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .7em;
 }
+nav .links i{
+    font-size: 16px;
+    padding: 0 0 5px 0;
+}
+
 nav .links li:hover{
     background: #afafaf64;
+
 }
-.links li.active{
+/* .links li.active{
     background: #ffffffa4;
-}
+} */
 #nav-toggle{
     position: relative;
     top: -100px;
@@ -188,10 +198,12 @@ nav.sticky .links{
    background: inherit;
   }
     nav .links a{
-        font-size: 16px;
+        font-size: 10px;
         transition: all .4s ;
     }
-
+    nav .links a i{
+        display: none;
+    }
     nav :checked ~ .links{
         bottom: 0;
     }
@@ -217,20 +229,22 @@ nav.sticky .links{
         background: #dfdfdfa3;
         justify-content: space-around;
         padding: 80px 10%;
-        /* text-align: ; */
+        text-align: center;
        
     }
     .index-section{
         background-image: none;
+    }
+    .buttons{
+        text-align: center;
         
     }
     .index-div{
         grid-row: 2;
-        
     }
     .image-div{
         grid-row: 1;
-        
+        margin: 0 0 -50% 0;
     }
     .index-section h1{
         font-size: 1.2rem;
@@ -243,10 +257,58 @@ nav.sticky .links{
         width: 100%;
     }
     .buttons{
-        display: flex;
         margin: 10px;
     }
-
+    .services{
+        height: 100vh;
+    }
+}
+@media (max-width:768) {
+    .index-div{
+        margin: 0 0 100% 0;
+    }
+    .index-section p{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width:414px) {
+    .buttons{
+        display: flex;
+    }
+}
+@media (max-width:360px) {
+    .buttons{
+        display: flex;
+    }
+    .index-section{
+        text-align: center;
+    }
+}
+@media (max-width:375px) {
+    .buttons{
+        display: flex;
+    }
+    .index-section{
+        text-align: center;
+    }
+    .image-div{
+        grid-row: 1;
+        margin: auto;
+        
+    }
+}
+@media (max-width:320px) {
+    .buttons{
+        display: flex;
+    }
+    .index-section{
+        text-align: center;
+    }
+    .image-div{
+        grid-row: 1;
+        margin: 0 0 -100% 0;
+        
+    }
 }
 .index-section{
     background-image: url(imgs/bubble-png-transparent-bubble-images-pluspng-21.png);
@@ -458,10 +520,10 @@ form {
 }
 .services{
     text-align: center;
-    background: #ffffff;
+    background: #fff;
     /* align-items: center; */
     padding: 15px 10%;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 .services h3{
@@ -469,10 +531,10 @@ form {
 }
 
 .services .sevContainer{
-    justify-content: space-around;
+    /* justify-content: space-around; */
     /* align-items: center; */
     display: grid;
-    grid-template-columns: repeat(2, 45%); 
+    grid-template-columns: repeat(2, 50%); 
     padding: 50px 0;
 }
 .services .sevContainer p, .sevContainer h3{
@@ -482,9 +544,13 @@ form {
 }
 
 .services .myServicesImage img{
-    width: 85%;
+    width: 90%;
     border-radius: 5%;
-    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
+    transition: all .4s ease-in-out;
+}
+.services .myServicesImage img:hover{
+    box-shadow: 0 5px 25px 1px rgba(0, 0, 0, 0.5);
 }
 .services h1, .services h3 a{
     color: var(--nav-background-color);
@@ -494,7 +560,6 @@ form {
 }
 .services h1{
     padding: 55px 0 0 0;
-    border-bottom: 2px solid #5DC3F4;
 }
 /* .myServicesText{
     padding: 25px 0;
@@ -519,6 +584,7 @@ form {
 
 .myServicesText {
     transition: all .4s ease-in-out;
+    padding: 0 0 0 100px;
 }
 
 .service-header {
@@ -539,14 +605,10 @@ form {
     text-decoration: none;
     transition: all .4s ease-in-out;
     cursor: pointer;
-    border-bottom: 2px solid #5DC3F4;
-}
-
-.service-header a:hover {
-    color: #5DC3F4;
+    /* border-bottom: 2px solid #5DC3F4; */
 }
 .service-header a.active {
-    color: #5DC3F4;
+    border-bottom: 2px solid #5DC3F4;
 }
 #revealText1{
     display: block;
@@ -562,13 +624,24 @@ form {
         flex-direction: column;
         
     }
+    .myServicesText {
+        transition: all .4s ease-in-out;
+        padding: 0 0;
+    }
     .services{
         /* display: grid;
         grid-template-columns: repeat(1, 90%); */
-        height: 100vh;
+        height: auto;
     }
     .service-header h3{
-        font-size: .8rem;
+        font-size: auto;
         padding: 20px 0 0 0;
     }
+}
+.Portfolio{
+    height: 100vh;
+    background: #5dc4f441;
+}
+.typed-cursor{
+    display: none;
 }

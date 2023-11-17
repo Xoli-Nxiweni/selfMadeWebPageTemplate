@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="script.js" defer></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -24,10 +27,10 @@
         <input type="checkbox" id="nav-toggle">
         <div class="logo"><a href="index.html">X O _</a></div>
         <ul class="links">
-            <li><a href="index.html">home</a></li>
-            <li><a href="#services">services</a></li>
-            <li><a href="#portfolio" onclick="contactPopUp()">portfolio</a></li>
-            <li><a href="#projects" onclick="contactPopUp()">projects</a></li>
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>home</a></li>
+            <li><a href="#services"><i class="fa fa-cogs" aria-hidden="true"></i>services</a></li>
+            <li><a href="#Portfolio"><i class="fa fa-file-code-o" aria-hidden="true"></i>portfolio</a></li>
+            <li><a href="#projects" onclick="contactPopUp()"><i class="fa fa-book" aria-hidden="true"></i>projects</a></li>
         </ul>
         <label for="nav-toggle" class="toggleBar">
             <div class="bar"></div>
@@ -78,10 +81,10 @@
         </div>
     </section>
     <div class="services" id="services">
-        <h1>My <span>Services</span></h1>
+        <h1><span class="effect2"></span>|</h1>
         <div class="sevContainer">
             <div class="myServicesImage">
-                <img class="horse" src="https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/318314251_2306662119500524_3689351205664377195_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cpX-77cSzBgAX8V6r2s&_nc_oc=AQn9ZiUVvJnEdNc8YAMUO-LoIjcCbciN4ZLjORWOz2s8wyz1S6YHIOtJieGElX_5NSs&_nc_ht=scontent-jnb1-1.xx&oh=00_AfCw0f49I-D6lVsBEdBA24GNpMzhkNkKmfkz6EeR4gmh3A&oe=655248DF">
+                <img class="horse" src="imgs/heroBanner.png">
             </div>
             <!-- <div class="myServicesText">
                 <div class="service-header">
@@ -102,9 +105,9 @@
 
             <div class="myServicesText">
                 <div class="service-header">
-                    <h3><span><a id="click1" onclick="infoReveal('revealText1')" class="active">About Me</a></span></h3>
-                    <h3><span><a id="click2" onclick="infoReveal('revealText2')" class="active">My Passion</a></span></h3>
-                    <h3><span><a id="click3" onclick="infoReveal('revealText3')" class="active">My Services</a></span></h3>
+                    <h3><span><a id="click1" onclick="infoReveal('revealText1', this)" class="active">About Me</a></span></h3>
+                    <h3><span><a id="click2" onclick="infoReveal('revealText2', this)">My Passion</a></span></h3>
+                    <h3><span><a id="click3" onclick="infoReveal('revealText3', this)">My Services</a></span></h3>
                 </div>
                 <div class="revealText" id="revealText1">
                     <p>I am a Software Engineer with a few years of experience in Systems Development. I am passionate about creating secure and exciting applications and I am always looking for new ways to learn and grow. I am also a creative and resourceful person, and I am always up for a challenge.
@@ -132,6 +135,10 @@
                 
             </div> -->
     </div>
+</div>
+<div class="Portfolio" id="Portfolio">
+
+</div>
     
     <script>
         // Initialize ScrollReveal
