@@ -114,3 +114,20 @@ closePopupButton.addEventListener("click", function () {
 // message => alert(message)
 // )
 // });
+
+
+
+// JavaScript code to update progress bars with transition effect
+document.addEventListener('DOMContentLoaded', function () {
+  updateProgressBar('scalePercentage1', 'progressBar1');
+  updateProgressBar('scalePercentage2', 'progressBar2');
+  updateProgressBar('scalePercentage3', 'progressBar3');
+  updateProgressBar('scalePercentage4', 'progressBar4');
+  updateProgressBar('scalePercentage5', 'progressBar5');
+});
+
+function updateProgressBar(scalePercentageId, progressBarId) {
+  var scalePercentage = parseInt(document.getElementById(scalePercentageId).innerText);
+  var progressBar = document.getElementById(progressBarId);
+  progressBar.style.width = scalePercentage + '%';
+}

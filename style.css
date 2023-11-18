@@ -156,6 +156,15 @@ nav .toggleBar .bar{
     .index-section .effect{
         padding: 0 10px;
     }
+    .portfolioContainers .leftContainer, .portfolioContainers .midContainer, .portfolioContainers .rightContainer{
+        width: 100%;
+    }
+    .Portfolio{
+        /* height: 100vh; */
+    }
+    .LanguageContainers div{
+        width: 100%;
+    }
 }
 @media (max-width: 940px) {
     nav{
@@ -523,7 +532,7 @@ form {
     background: #fff;
     /* align-items: center; */
     padding: 15px 10%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .services h3{
@@ -544,7 +553,7 @@ form {
 }
 
 .services .myServicesImage img{
-    width: 90%;
+    width: 75%;
     border-radius: 5%;
     box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
     transition: all .4s ease-in-out;
@@ -637,11 +646,105 @@ form {
         font-size: auto;
         padding: 20px 0 0 0;
     }
+
+.portfolioContainers, .LanguageContainers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolioContainers .leftContainer, .portfolioContainers .midContainer, .portfolioContainers .rightContainer{
+    width: 100%;
+}
+.LanguageContainers .firstContainer, .LanguageContainers .secondContainer, .LanguageContainers .thirdContainer, .LanguageContainers .fourthContainer{
+    width: 100%;
+}
+    
 }
 .Portfolio{
-    height: 100vh;
-    background: #5dc4f441;
+    padding: 0 10%;
+    background: #dfdfdfa3;
+    /* display: grid; */
+    text-align: center;
+    /* height: 100vh; */
+    background-image: url(imgs/bubble-png-transparent-bubble-images-pluspng-21.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-around;
+    /* grid-template-columns: repeat(3, auto); */
+}
+.Portfolio h1{
+    padding: 65px 0 0 0 ;
+    color: #00396E;
+    text-align: left;
+}
+.Portfolio h3{
+    color: #00396E;
+}
+.Languages h1{
+    padding: 20px;
+}
+.portfolioContainers{
+    display: flex;
+    align-items: center;
+}
+.portfolioContainers .leftContainer, .portfolioContainers .midContainer, .portfolioContainers .rightContainer{
+    background: #fff;
+    /* min-width: 200px; */
+    /* box-shadow: 5px 10px 10px #00000029; */
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
+    /* height: 200px; */
+    margin: 20px;
+    transition: all .4s ease-in-out;
+    border: 1px solid #00396E;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+.leftContainer:hover, .midContainer:hover, .rightContainer:hover{
+    /* transform: scale(1.1); */
+    border: 1px solid #5DC3F4;
+    /* box-shadow: 10px 10px 10px #00396E; */
+    box-shadow: 0 5px 25px 1px rgba(0, 0, 0, 0.5);
 }
 .typed-cursor{
     display: none;
+}
+.LanguageContainers{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.LanguageContainers .firstContainer, .LanguageContainers .secondContainer, .LanguageContainers .thirdContainer, .LanguageContainers .fourthContainer{
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    background: #ffffff;
+    margin: 1%;
+    border: 1px solid #00396E;
+    padding: 10px;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.Languages img{
+    width: 2rem;
+    color: #00396E;
+}
+.progress-bar-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid #5DC3F4;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #5DC3F4; 
+    transition: width 0.5s ease; 
+    text-align: center;
+}
+#scalePercentage1{
+    text-align: center;
 }
