@@ -159,9 +159,7 @@ nav .toggleBar .bar{
     .portfolioContainers .leftContainer, .portfolioContainers .midContainer, .portfolioContainers .rightContainer{
         width: 100%;
     }
-    .Portfolio{
-        /* height: 100vh; */
-    }
+
     .LanguageContainers div{
         width: 100%;
     }
