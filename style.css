@@ -847,7 +847,7 @@ form {
 	transition: .5s;
 }
 .footer-links a:hover{
-	color: #1fb2aa;
+	color: #5DC3F4;
 }
 .footer-distributed .footer-company-name{
 	color:  var(--nav-background-color);
@@ -942,7 +942,7 @@ form {
 	transition: .5s;
 }
 .footer-icons a:hover{
-	color: #fff;
+	color: #5DC3F4;
 }
 @media (max-width: 880px) {
 
