@@ -80,6 +80,16 @@ var typed2 = new Typed(".effect2", {
   backSpeed: 25,
   backDelay: 2000,
 });
+var typed2 = new Typed(".effect3", {
+  strings: ["Work in Progress.", 
+  "Page under development.", 
+  "Scroll Through.", 
+  "And Thank You For Visiting.",],
+  loop: true,
+  typeSpeed: 90,
+  backSpeed: 25,
+  backDelay: 2000,
+});
 
 
 
